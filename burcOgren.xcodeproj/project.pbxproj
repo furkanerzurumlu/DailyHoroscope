@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6731442CB3A202207F98A733 /* Pods_burcOgren.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F301A1F8A4C78EFC0006073 /* Pods_burcOgren.framework */; };
 		DC5D38FB2A165717004DB526 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */; };
+		DC5D39012A16D1E3004DB526 /* HomeFLow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5D39002A16D1E3004DB526 /* HomeFLow.storyboard */; };
+		DC5D39032A16D21E004DB526 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D39022A16D21E004DB526 /* HomeFlow.swift */; };
 		DCA164C12A164A9500C28C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C02A164A9500C28C9B /* AppDelegate.swift */; };
 		DCA164C32A164A9500C28C9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C22A164A9500C28C9B /* SceneDelegate.swift */; };
 		DCA164C52A164A9500C28C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C42A164A9500C28C9B /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 		07B7EA09EB24FFAAA71B506E /* Pods-burcOgren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burcOgren.release.xcconfig"; path = "Target Support Files/Pods-burcOgren/Pods-burcOgren.release.xcconfig"; sourceTree = "<group>"; };
 		0F301A1F8A4C78EFC0006073 /* Pods_burcOgren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_burcOgren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC5D39002A16D1E3004DB526 /* HomeFLow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeFLow.storyboard; sourceTree = "<group>"; };
+		DC5D39022A16D21E004DB526 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		DCA164BD2A164A9500C28C9B /* burcOgren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burcOgren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA164C02A164A9500C28C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA164C22A164A9500C28C9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC5D38FC2A16D15A004DB526 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D38FD2A16D166004DB526 /* LogIn */,
+				DC5D38FE2A16D187004DB526 /* Home Flow */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DC5D38FD2A16D166004DB526 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				DCA164C62A164A9500C28C9B /* Main.storyboard */,
+				DCA164C42A164A9500C28C9B /* ViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		DC5D38FE2A16D187004DB526 /* Home Flow */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D39002A16D1E3004DB526 /* HomeFLow.storyboard */,
+				DC5D39022A16D21E004DB526 /* HomeFlow.swift */,
+			);
+			path = "Home Flow";
+			sourceTree = "<group>";
+		};
+		DC5D38FF2A16D193004DB526 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DCA164C02A164A9500C28C9B /* AppDelegate.swift */,
+				DCA164C22A164A9500C28C9B /* SceneDelegate.swift */,
+				DCA164C92A164A9600C28C9B /* Assets.xcassets */,
+				DCA164CB2A164A9600C28C9B /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DC5D39042A16D288004DB526 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		DCA164B42A164A9400C28C9B = {
 			isa = PBXGroup;
 			children = (
@@ -82,13 +131,10 @@
 		DCA164BF2A164A9500C28C9B /* burcOgren */ = {
 			isa = PBXGroup;
 			children = (
+				DC5D39042A16D288004DB526 /* Router */,
+				DC5D38FC2A16D15A004DB526 /* UI */,
+				DC5D38FF2A16D193004DB526 /* Other */,
 				DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */,
-				DCA164C02A164A9500C28C9B /* AppDelegate.swift */,
-				DCA164C22A164A9500C28C9B /* SceneDelegate.swift */,
-				DCA164C42A164A9500C28C9B /* ViewController.swift */,
-				DCA164C62A164A9500C28C9B /* Main.storyboard */,
-				DCA164C92A164A9600C28C9B /* Assets.xcassets */,
-				DCA164CB2A164A9600C28C9B /* LaunchScreen.storyboard */,
 				DCA164CE2A164A9600C28C9B /* Info.plist */,
 			);
 			path = burcOgren;
@@ -154,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5D39012A16D1E3004DB526 /* HomeFLow.storyboard in Resources */,
 				DCA164CD2A164A9600C28C9B /* LaunchScreen.storyboard in Resources */,
 				DC5D38FB2A165717004DB526 /* GoogleService-Info.plist in Resources */,
 				DCA164CA2A164A9600C28C9B /* Assets.xcassets in Resources */,
@@ -212,6 +259,7 @@
 			files = (
 				DCA164C52A164A9500C28C9B /* ViewController.swift in Sources */,
 				DCA164C12A164A9500C28C9B /* AppDelegate.swift in Sources */,
+				DC5D39032A16D21E004DB526 /* HomeFlow.swift in Sources */,
 				DCA164C32A164A9500C28C9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
