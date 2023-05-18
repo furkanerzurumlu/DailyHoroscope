@@ -20,8 +20,12 @@ class ViewController: UIViewController {
         
         setField(field: emailField, placeholder: "Email Address")
         setField(field: passwordField, placeholder: "Password")
-        contiueButton.setTitle("Başla", for: UIControl.State.normal)
+        contiueButton.setTitle("Continue", for: UIControl.State.normal)
         setButton(button: contiueButton)
+        
+//        if FirebaseAuth.Auth.auth().currentUser != nil {
+//
+//        }
     }
     
     func setField(field:UITextField,placeholder:String){
@@ -29,6 +33,9 @@ class ViewController: UIViewController {
         field.layer.borderWidth = 0.5
         field.layer.borderColor = UIColor.lightGray.cgColor
         field.placeholder = placeholder
+        field.autocapitalizationType = .none
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
         
     }
     
@@ -65,15 +72,40 @@ class ViewController: UIViewController {
             }
             guard error == nil else {
                 // show account creation
-                strongSelf.showCreateAccont()
+                strongSelf.showCreateAccont(email: email, password: password)
                 return
             }
             print("You have signed in")
+            strongSelf.emailField.isHidden = true
+            strongSelf.passwordField.isHidden = true
+            strongSelf.contiueButton.isHidden = true
         })
         
     }
-    func showCreateAccont(){
-        
+    func showCreateAccont(email: String, password: String){
+        let alert = UIAlertController(title: "Create Account", message: "Would you like to create an account", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] result, error in
+                guard let strongSelf = self else {
+                    return
+                }
+                guard error == nil else {
+                    // show account creation
+                    print("Account creation failed")
+                    return
+                }
+                print("You have signed in")
+                // lets go new page
+                
+                strongSelf.emailField.isHidden = true
+                strongSelf.passwordField.isHidden = true
+                strongSelf.contiueButton.isHidden = true
+            })
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel,handler: { _ in
+            
+        }))
+        present(alert,animated: true)
     }
 }
 

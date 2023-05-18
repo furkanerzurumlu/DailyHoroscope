@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-Qv-wod">
-                                <rect key="frame" x="40" y="197" width="295" height="228"/>
+                                <rect key="frame" x="40" y="328.33333333333331" width="295" height="156.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VK5-In-zxQ">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
@@ -36,7 +36,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSX-Px-Ooz">
-                                        <rect key="frame" x="0.0" y="122" width="295" height="106"/>
+                                        <rect key="frame" x="0.0" y="122.00000000000001" width="295" height="34.666666666666671"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                         <connections>
@@ -44,15 +44,24 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whh-Tw-phf">
+                                <rect key="frame" x="120" y="170" width="135" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
+                            <constraint firstItem="whh-Tw-phf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="6Jv-1n-rzB"/>
                             <constraint firstItem="zdN-Qv-wod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="6zg-NU-rw3"/>
-                            <constraint firstItem="zdN-Qv-wod" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="HiT-Ao-RTj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zdN-Qv-wod" secondAttribute="bottom" constant="353" id="Suy-1Z-GUq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="whh-Tw-phf" secondAttribute="trailing" constant="120" id="RfP-sH-yg4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zdN-Qv-wod" secondAttribute="bottom" constant="293" id="ZmG-gZ-XSs"/>
+                            <constraint firstItem="zdN-Qv-wod" firstAttribute="top" secondItem="whh-Tw-phf" secondAttribute="bottom" constant="120" id="k4K-tS-qio"/>
+                            <constraint firstItem="whh-Tw-phf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="uyW-ya-i76"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zdN-Qv-wod" secondAttribute="trailing" constant="40" id="vaa-Zp-oup"/>
                         </constraints>
                     </view>
@@ -64,15 +73,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="4"/>
+            <point key="canvasLocation" x="125.59999999999999" y="3.6945812807881775"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
