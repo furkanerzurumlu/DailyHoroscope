@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6731442CB3A202207F98A733 /* Pods_burcOgren.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F301A1F8A4C78EFC0006073 /* Pods_burcOgren.framework */; };
+		DC5D38FB2A165717004DB526 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */; };
 		DCA164C12A164A9500C28C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C02A164A9500C28C9B /* AppDelegate.swift */; };
 		DCA164C32A164A9500C28C9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C22A164A9500C28C9B /* SceneDelegate.swift */; };
 		DCA164C52A164A9500C28C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C42A164A9500C28C9B /* ViewController.swift */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07B7EA09EB24FFAAA71B506E /* Pods-burcOgren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burcOgren.release.xcconfig"; path = "Target Support Files/Pods-burcOgren/Pods-burcOgren.release.xcconfig"; sourceTree = "<group>"; };
+		0F301A1F8A4C78EFC0006073 /* Pods_burcOgren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_burcOgren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCA164BD2A164A9500C28C9B /* burcOgren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burcOgren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA164C02A164A9500C28C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA164C22A164A9500C28C9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		DCA164C92A164A9600C28C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCA164CC2A164A9600C28C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCA164CE2A164A9600C28C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E044CB2EFA6A933F19204A94 /* Pods-burcOgren.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burcOgren.debug.xcconfig"; path = "Target Support Files/Pods-burcOgren/Pods-burcOgren.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6731442CB3A202207F98A733 /* Pods_burcOgren.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60C0734C0C44511998331BD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E044CB2EFA6A933F19204A94 /* Pods-burcOgren.debug.xcconfig */,
+				07B7EA09EB24FFAAA71B506E /* Pods-burcOgren.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		80A49EC19BE8C33067D06A7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F301A1F8A4C78EFC0006073 /* Pods_burcOgren.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCA164B42A164A9400C28C9B = {
 			isa = PBXGroup;
 			children = (
 				DCA164BF2A164A9500C28C9B /* burcOgren */,
 				DCA164BE2A164A9500C28C9B /* Products */,
+				60C0734C0C44511998331BD3 /* Pods */,
+				80A49EC19BE8C33067D06A7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 		DCA164BF2A164A9500C28C9B /* burcOgren */ = {
 			isa = PBXGroup;
 			children = (
+				DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */,
 				DCA164C02A164A9500C28C9B /* AppDelegate.swift */,
 				DCA164C22A164A9500C28C9B /* SceneDelegate.swift */,
 				DCA164C42A164A9500C28C9B /* ViewController.swift */,
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCA164D12A164A9600C28C9B /* Build configuration list for PBXNativeTarget "burcOgren" */;
 			buildPhases = (
+				B29A307746581E619E0E804E /* [CP] Check Pods Manifest.lock */,
 				DCA164B92A164A9400C28C9B /* Sources */,
 				DCA164BA2A164A9400C28C9B /* Frameworks */,
 				DCA164BB2A164A9400C28C9B /* Resources */,
+				D3C60909E035480042F96280 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +132,7 @@
 				};
 			};
 			buildConfigurationList = DCA164B82A164A9400C28C9B /* Build configuration list for PBXProject "burcOgren" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -126,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA164CD2A164A9600C28C9B /* LaunchScreen.storyboard in Resources */,
+				DC5D38FB2A165717004DB526 /* GoogleService-Info.plist in Resources */,
 				DCA164CA2A164A9600C28C9B /* Assets.xcassets in Resources */,
 				DCA164C82A164A9500C28C9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B29A307746581E619E0E804E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-burcOgren-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3C60909E035480042F96280 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-burcOgren/Pods-burcOgren-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-burcOgren/Pods-burcOgren-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-burcOgren/Pods-burcOgren-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DCA164B92A164A9400C28C9B /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		DCA164D22A164A9600C28C9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E044CB2EFA6A933F19204A94 /* Pods-burcOgren.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +383,7 @@
 		};
 		DCA164D32A164A9600C28C9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07B7EA09EB24FFAAA71B506E /* Pods-burcOgren.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
