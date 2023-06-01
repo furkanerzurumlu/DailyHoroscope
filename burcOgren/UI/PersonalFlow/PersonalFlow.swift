@@ -1,18 +1,20 @@
 //
-//  HomeFlow.swift
+//  PersonalFlow.swift
 //  burcOgren
 //
-//  Created by Furkan Erzurumlu on 19.05.2023.
+//  Created by Furkan Erzurumlu on 31.05.2023.
 //
 
 import UIKit
 
-class HomeFlow: UIViewController {
+class PersonalFlow: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
+//        tabBarItem = UITabBarItem(title: "Home", image: .remove, selectedImage: .remove)
     }
     
 

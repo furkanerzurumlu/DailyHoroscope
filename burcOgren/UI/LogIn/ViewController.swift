@@ -13,13 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var contiueButton: UIButton!
-    
+    @IBOutlet weak var titleNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setField(field: emailField, placeholder: "Email Address")
         setField(field: passwordField, placeholder: "Password")
+        passwordField.isSecureTextEntry = true
         contiueButton.setTitle("Continue", for: UIControl.State.normal)
         setButton(button: contiueButton)
         
@@ -73,12 +74,13 @@ class ViewController: UIViewController {
             guard error == nil else {
                 // show account creation
                 strongSelf.showCreateAccont(email: email, password: password)
+//                Router.shared.showHomeFlow(navigationController: self?.navigationController)
                 return
             }
             print("You have signed in")
-            strongSelf.emailField.isHidden = true
-            strongSelf.passwordField.isHidden = true
-            strongSelf.contiueButton.isHidden = true
+//            strongSelf.emailField.isHidden = true
+//            strongSelf.passwordField.isHidden = true
+//            strongSelf.contiueButton.isHidden = true
         })
         
     }
@@ -96,10 +98,13 @@ class ViewController: UIViewController {
                 }
                 print("You have signed in")
                 // lets go new page
+                self?.performSegue(withIdentifier: "deneme", sender: nil)
                 
-                strongSelf.emailField.isHidden = true
-                strongSelf.passwordField.isHidden = true
-                strongSelf.contiueButton.isHidden = true
+//                strongSelf.emailField.isHidden = true
+//                strongSelf.passwordField.isHidden = true
+//                strongSelf.contiueButton.isHidden = true
+//                strongSelf.titleNameLabel.isHidden = true
+                self?.tabBarController?.tabBar.isHidden = false
             })
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel,handler: { _ in

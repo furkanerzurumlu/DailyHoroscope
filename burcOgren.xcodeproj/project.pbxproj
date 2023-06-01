@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		6731442CB3A202207F98A733 /* Pods_burcOgren.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F301A1F8A4C78EFC0006073 /* Pods_burcOgren.framework */; };
 		DC5D38FB2A165717004DB526 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */; };
-		DC5D39012A16D1E3004DB526 /* HomeFLow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5D39002A16D1E3004DB526 /* HomeFLow.storyboard */; };
-		DC5D39032A16D21E004DB526 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D39022A16D21E004DB526 /* HomeFlow.swift */; };
+		DC5D39062A1A6C67004DB526 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D39052A1A6C67004DB526 /* Router.swift */; };
+		DC5D39082A1A6CC1004DB526 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D39072A1A6CC1004DB526 /* UIViewController-Extension.swift */; };
+		DC7D6C542A1A883600735B0B /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D6C532A1A883600735B0B /* HomeFlow.swift */; };
+		DC88E19F2A27C16B007FAE8A /* PersonalFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC88E19E2A27C16B007FAE8A /* PersonalFlow.swift */; };
+		DC88E1A12A27C17E007FAE8A /* OtherFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC88E1A02A27C17E007FAE8A /* OtherFlow.swift */; };
 		DCA164C12A164A9500C28C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C02A164A9500C28C9B /* AppDelegate.swift */; };
 		DCA164C32A164A9500C28C9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C22A164A9500C28C9B /* SceneDelegate.swift */; };
 		DCA164C52A164A9500C28C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA164C42A164A9500C28C9B /* ViewController.swift */; };
@@ -23,8 +26,11 @@
 		07B7EA09EB24FFAAA71B506E /* Pods-burcOgren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-burcOgren.release.xcconfig"; path = "Target Support Files/Pods-burcOgren/Pods-burcOgren.release.xcconfig"; sourceTree = "<group>"; };
 		0F301A1F8A4C78EFC0006073 /* Pods_burcOgren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_burcOgren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5D38FA2A165717004DB526 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DC5D39002A16D1E3004DB526 /* HomeFLow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeFLow.storyboard; sourceTree = "<group>"; };
-		DC5D39022A16D21E004DB526 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
+		DC5D39052A1A6C67004DB526 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DC5D39072A1A6CC1004DB526 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
+		DC7D6C532A1A883600735B0B /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
+		DC88E19E2A27C16B007FAE8A /* PersonalFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalFlow.swift; sourceTree = "<group>"; };
+		DC88E1A02A27C17E007FAE8A /* OtherFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFlow.swift; sourceTree = "<group>"; };
 		DCA164BD2A164A9500C28C9B /* burcOgren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burcOgren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA164C02A164A9500C28C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA164C22A164A9500C28C9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +74,10 @@
 		DC5D38FC2A16D15A004DB526 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DC88E19D2A27C156007FAE8A /* OtherFlow */,
+				DC88E19C2A27C149007FAE8A /* PersonalFlow */,
+				DC7D6C522A1A881900735B0B /* HomeFlow */,
 				DC5D38FD2A16D166004DB526 /* LogIn */,
-				DC5D38FE2A16D187004DB526 /* Home Flow */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -81,15 +89,6 @@
 				DCA164C42A164A9500C28C9B /* ViewController.swift */,
 			);
 			path = LogIn;
-			sourceTree = "<group>";
-		};
-		DC5D38FE2A16D187004DB526 /* Home Flow */ = {
-			isa = PBXGroup;
-			children = (
-				DC5D39002A16D1E3004DB526 /* HomeFLow.storyboard */,
-				DC5D39022A16D21E004DB526 /* HomeFlow.swift */,
-			);
-			path = "Home Flow";
 			sourceTree = "<group>";
 		};
 		DC5D38FF2A16D193004DB526 /* Other */ = {
@@ -106,8 +105,34 @@
 		DC5D39042A16D288004DB526 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				DC5D39052A1A6C67004DB526 /* Router.swift */,
+				DC5D39072A1A6CC1004DB526 /* UIViewController-Extension.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		DC7D6C522A1A881900735B0B /* HomeFlow */ = {
+			isa = PBXGroup;
+			children = (
+				DC7D6C532A1A883600735B0B /* HomeFlow.swift */,
+			);
+			path = HomeFlow;
+			sourceTree = "<group>";
+		};
+		DC88E19C2A27C149007FAE8A /* PersonalFlow */ = {
+			isa = PBXGroup;
+			children = (
+				DC88E19E2A27C16B007FAE8A /* PersonalFlow.swift */,
+			);
+			path = PersonalFlow;
+			sourceTree = "<group>";
+		};
+		DC88E19D2A27C156007FAE8A /* OtherFlow */ = {
+			isa = PBXGroup;
+			children = (
+				DC88E1A02A27C17E007FAE8A /* OtherFlow.swift */,
+			);
+			path = OtherFlow;
 			sourceTree = "<group>";
 		};
 		DCA164B42A164A9400C28C9B = {
@@ -200,7 +225,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5D39012A16D1E3004DB526 /* HomeFLow.storyboard in Resources */,
 				DCA164CD2A164A9600C28C9B /* LaunchScreen.storyboard in Resources */,
 				DC5D38FB2A165717004DB526 /* GoogleService-Info.plist in Resources */,
 				DCA164CA2A164A9600C28C9B /* Assets.xcassets in Resources */,
@@ -259,7 +283,11 @@
 			files = (
 				DCA164C52A164A9500C28C9B /* ViewController.swift in Sources */,
 				DCA164C12A164A9500C28C9B /* AppDelegate.swift in Sources */,
-				DC5D39032A16D21E004DB526 /* HomeFlow.swift in Sources */,
+				DC88E19F2A27C16B007FAE8A /* PersonalFlow.swift in Sources */,
+				DC5D39062A1A6C67004DB526 /* Router.swift in Sources */,
+				DC88E1A12A27C17E007FAE8A /* OtherFlow.swift in Sources */,
+				DC5D39082A1A6CC1004DB526 /* UIViewController-Extension.swift in Sources */,
+				DC7D6C542A1A883600735B0B /* HomeFlow.swift in Sources */,
 				DCA164C32A164A9500C28C9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
