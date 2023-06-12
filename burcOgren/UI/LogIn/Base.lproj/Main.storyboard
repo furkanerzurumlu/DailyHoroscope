@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-Qv-wod">
-                                <rect key="frame" x="40" y="328.66666666666669" width="295" height="156.33333333333331"/>
+                                <rect key="frame" x="40" y="277.66666666666669" width="295" height="207.33333333333331"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VK5-In-zxQ">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
@@ -36,18 +36,29 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSX-Px-Ooz">
-                                        <rect key="frame" x="0.0" y="121.99999999999999" width="295" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="122" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Rem-4j-w9m"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                         <connections>
                                             <action selector="nextPageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzd-rN-EXY"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Z1-O7-qGc">
+                                        <rect key="frame" x="0.0" y="173" width="295" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                        <connections>
+                                            <action selector="nextPageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WWt-De-iMN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whh-Tw-phf">
-                                <rect key="frame" x="120" y="170.33333333333334" width="135" height="38.333333333333343"/>
+                                <rect key="frame" x="120" y="119.33333333333333" width="135" height="38.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38.333333333333343" id="N7X-FX-rNO"/>
                                 </constraints>
@@ -145,7 +156,7 @@
                         <viewLayoutGuide key="safeArea" id="SG8-nU-Bf1"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="person.line.dotted.person" catalog="system" id="pZ2-AH-bhp"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="pZ2-AH-bhp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sla-xV-mkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +181,6 @@
     </scenes>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="person.line.dotted.person" catalog="system" width="128" height="58"/>
         <image name="star.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
