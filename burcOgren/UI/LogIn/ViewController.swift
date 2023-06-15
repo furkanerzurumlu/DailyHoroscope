@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var contiueButton: UIButton!
     @IBOutlet weak var titleNameLabel: UILabel!
     
+    @IBOutlet weak var signInButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,13 +23,19 @@ class ViewController: UIViewController {
         setField(field: passwordField, placeholder: "Password")
         passwordField.isSecureTextEntry = true
         contiueButton.setTitle("Continue", for: UIControl.State.normal)
+        signInButton.setTitle("Sign In", for: UIControl.State.normal)
+        
+        setButton(button: signInButton)
         setButton(button: contiueButton)
+        
+        let backgroundColor = UIColor(rgb: 0xB799FF)
+        self.view.backgroundColor = backgroundColor
         
         self.passwordField.setupLeftImage(imageName: "lock")
         self.emailField.setupLeftImage(imageName: "message")
-//        if FirebaseAuth.Auth.auth().currentUser != nil {
-//
-//        }
+        //        if FirebaseAuth.Auth.auth().currentUser != nil {
+        //
+        //        }
     }
     
     func setField(field:UITextField,placeholder:String){
@@ -76,13 +83,13 @@ class ViewController: UIViewController {
             guard error == nil else {
                 // show account creation
                 strongSelf.showCreateAccont(email: email, password: password)
-//                Router.shared.showHomeFlow(navigationController: self?.navigationController)
+                //                Router.shared.showHomeFlow(navigationController: self?.navigationController)
                 return
             }
             print("You have signed in")
-//            strongSelf.emailField.isHidden = true
-//            strongSelf.passwordField.isHidden = true
-//            strongSelf.contiueButton.isHidden = true
+            //            strongSelf.emailField.isHidden = true
+            //            strongSelf.passwordField.isHidden = true
+            //            strongSelf.contiueButton.isHidden = true
         })
         
     }
@@ -102,10 +109,10 @@ class ViewController: UIViewController {
                 // lets go new page
                 self?.performSegue(withIdentifier: "deneme", sender: nil)
                 
-//                strongSelf.emailField.isHidden = true
-//                strongSelf.passwordField.isHidden = true
-//                strongSelf.contiueButton.isHidden = true
-//                strongSelf.titleNameLabel.isHidden = true
+                //                strongSelf.emailField.isHidden = true
+                //                strongSelf.passwordField.isHidden = true
+                //                strongSelf.contiueButton.isHidden = true
+                //                strongSelf.titleNameLabel.isHidden = true
                 self?.tabBarController?.tabBar.isHidden = false
             })
         }))
@@ -117,29 +124,46 @@ class ViewController: UIViewController {
 }
 
 extension UITextField {
-
+    
     //MARK:- Set Image on the right of text fields
-
-  func setupRightImage(imageName:String){
-    let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
-    imageView.image = UIImage(named: imageName)
-    let imageContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 55, height: 40))
-    imageContainerView.addSubview(imageView)
-    rightView = imageContainerView
-    rightViewMode = .always
-    self.tintColor = .lightGray
-}
-
- //MARK:- Set Image on left of text fields
-
+    
+    func setupRightImage(imageName:String){
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
+        imageView.image = UIImage(named: imageName)
+        let imageContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 55, height: 40))
+        imageContainerView.addSubview(imageView)
+        rightView = imageContainerView
+        rightViewMode = .always
+        self.tintColor = .lightGray
+    }
+    
+    //MARK:- Set Image on left of text fields
+    
     func setupLeftImage(imageName:String){
-       let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
-       imageView.image = UIImage(named: imageName)
-       let imageContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
-       imageContainerView.addSubview(imageView)
-       leftView = imageContainerView
-       leftViewMode = .always
-       self.tintColor = .lightGray
-     }
-
-  }
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
+        imageView.image = UIImage(named: imageName)
+        let imageContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
+        imageContainerView.addSubview(imageView)
+        leftView = imageContainerView
+        leftViewMode = .always
+        self.tintColor = .lightGray
+    }
+    
+}
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
+}

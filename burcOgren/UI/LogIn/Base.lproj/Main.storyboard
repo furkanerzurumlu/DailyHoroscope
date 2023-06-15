@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q3f-Pw-kLo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q3f-Pw-kLo">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -83,6 +84,7 @@
                         <outlet property="contiueButton" destination="rSX-Px-Ooz" id="wpY-Ob-ggg"/>
                         <outlet property="emailField" destination="VK5-In-zxQ" id="LTh-AR-dF7"/>
                         <outlet property="passwordField" destination="0ph-x8-R9r" id="uFD-IK-jEH"/>
+                        <outlet property="signInButton" destination="9Z1-O7-qGc" id="008-yI-gXM"/>
                         <outlet property="titleNameLabel" destination="whh-Tw-phf" id="lnT-PJ-DBB"/>
                         <segue destination="YgG-cM-9j1" kind="show" identifier="deneme" id="c5t-vI-Tmw"/>
                     </connections>
@@ -114,7 +116,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="r6X-ux-bA0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mxk-V8-6OX">
-                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -133,6 +135,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mTy-lt-ZV7"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hAr-fI-mqo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -144,7 +147,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUg-PK-c93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6785" y="633"/>
+            <point key="canvasLocation" x="6806" y="618"/>
         </scene>
         <!--Item-->
         <scene sceneID="6g1-8H-XCy">
