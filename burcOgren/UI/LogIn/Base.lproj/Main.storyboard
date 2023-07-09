@@ -18,10 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-Qv-wod">
-                                <rect key="frame" x="40" y="277.66666666666669" width="295" height="207.33333333333331"/>
+                                <rect key="frame" x="40" y="272" width="295" height="213"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VK5-In-zxQ">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bzY-d8-j9t"/>
                                         </constraints>
@@ -30,6 +31,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ph-x8-R9r">
                                         <rect key="frame" x="0.0" y="61" width="295" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bgc-oi-nO6"/>
                                         </constraints>
@@ -48,7 +50,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Z1-O7-qGc">
-                                        <rect key="frame" x="0.0" y="173" width="295" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="173" width="295" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2GC-VF-KEH"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                         <connections>
@@ -59,7 +64,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whh-Tw-phf">
-                                <rect key="frame" x="120" y="119.33333333333333" width="135" height="38.333333333333329"/>
+                                <rect key="frame" x="120" y="113.66666666666667" width="135" height="38.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38.333333333333343" id="N7X-FX-rNO"/>
                                 </constraints>
@@ -67,14 +72,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YSG-Oa-e10">
+                                <rect key="frame" x="30" y="605" width="315" height="123"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGH-0J-RnW">
+                                        <rect key="frame" x="0.0" y="44.333333333333371" width="105" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX2-0r-12u">
+                                        <rect key="frame" x="105" y="44.333333333333371" width="105" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukt-2W-3TO">
+                                        <rect key="frame" x="210" y="44.333333333333371" width="105" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="fVv-rK-J9G"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zdN-Qv-wod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="6zg-NU-rw3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="whh-Tw-phf" secondAttribute="trailing" constant="120" id="RfP-sH-yg4"/>
+                            <constraint firstItem="YSG-Oa-e10" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XVN-7u-oVa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zdN-Qv-wod" secondAttribute="bottom" constant="293" id="ZmG-gZ-XSs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YSG-Oa-e10" secondAttribute="bottom" constant="50" id="eSW-11-DM2"/>
                             <constraint firstItem="zdN-Qv-wod" firstAttribute="top" secondItem="whh-Tw-phf" secondAttribute="bottom" constant="120" id="k4K-tS-qio"/>
+                            <constraint firstItem="YSG-Oa-e10" firstAttribute="top" secondItem="zdN-Qv-wod" secondAttribute="bottom" constant="120" id="uTa-Gk-nSZ"/>
                             <constraint firstItem="whh-Tw-phf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="uyW-ya-i76"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zdN-Qv-wod" secondAttribute="trailing" constant="40" id="vaa-Zp-oup"/>
                         </constraints>
@@ -83,9 +115,12 @@
                     <connections>
                         <outlet property="contiueButton" destination="rSX-Px-Ooz" id="wpY-Ob-ggg"/>
                         <outlet property="emailField" destination="VK5-In-zxQ" id="LTh-AR-dF7"/>
+                        <outlet property="facbookButton" destination="wX2-0r-12u" id="blJ-Yg-MyS"/>
+                        <outlet property="githubButton" destination="ukt-2W-3TO" id="W7Y-Bd-6Eq"/>
                         <outlet property="passwordField" destination="0ph-x8-R9r" id="uFD-IK-jEH"/>
                         <outlet property="signInButton" destination="9Z1-O7-qGc" id="008-yI-gXM"/>
                         <outlet property="titleNameLabel" destination="whh-Tw-phf" id="lnT-PJ-DBB"/>
+                        <outlet property="twitterButton" destination="rGH-0J-RnW" id="qGW-97-cO6"/>
                         <segue destination="YgG-cM-9j1" kind="show" identifier="deneme" id="c5t-vI-Tmw"/>
                     </connections>
                 </viewController>
@@ -187,9 +222,6 @@
         <image name="star.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

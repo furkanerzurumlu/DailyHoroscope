@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var contiueButton: UIButton!
     @IBOutlet weak var titleNameLabel: UILabel!
     
+    @IBOutlet weak var twitterButton: UIButton!
+    @IBOutlet weak var facbookButton: UIButton!
+    @IBOutlet weak var githubButton: UIButton!
+    
+    
     @IBOutlet weak var signInButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +30,15 @@ class ViewController: UIViewController {
         contiueButton.setTitle("Continue", for: UIControl.State.normal)
         signInButton.setTitle("Sign In", for: UIControl.State.normal)
         
+//        twitterButton.setImage(UIImage(named: "twitter"), for: .normal)
+//        twitterButton.setTitle("", for: UIControl.State.normal)
+        setSocialMediaButton(button: twitterButton, name: "twitter")
+        setSocialMediaButton(button: facbookButton, name: "facebook")
+        setSocialMediaButton(button: githubButton, name: "github")
+        
         setButton(button: signInButton)
         setButton(button: contiueButton)
+        
         
         let backgroundColor = UIColor(rgb: 0xB799FF)
         self.view.backgroundColor = backgroundColor
@@ -36,6 +48,10 @@ class ViewController: UIViewController {
         //        if FirebaseAuth.Auth.auth().currentUser != nil {
         //
         //        }
+    }
+    func setSocialMediaButton(button:UIButton,name:String){
+        button.setImage(UIImage(named: name), for: UIControl.State.normal)
+        button.setTitle("", for: UIControl.State.normal)
     }
     
     func setField(field:UITextField,placeholder:String){
